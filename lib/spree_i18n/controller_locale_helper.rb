@@ -5,7 +5,7 @@ module SpreeI18n
   module ControllerLocaleHelper
     extend ActiveSupport::Concern
     included do
-      before_filter :set_user_language
+      prepend_before_filter :set_user_language
       before_filter :globalize_fallbacks
 
       private
